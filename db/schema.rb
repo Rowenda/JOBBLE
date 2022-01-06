@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_04_164544) do
+ActiveRecord::Schema.define(version: 2022_01_06_143234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_01_04_164544) do
   create_table "chatrooms", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -38,7 +39,7 @@ ActiveRecord::Schema.define(version: 2022_01_04_164544) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.string "message"
+    t.string "content"
     t.bigint "user_id", null: false
     t.bigint "chatroom_id", null: false
     t.datetime "created_at", precision: 6, null: false

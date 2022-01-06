@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
   resources :users do
     collection do
       get :new_user_skills
@@ -17,8 +20,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :users, only: %i[show]
-  resources :messages, only: %i[show]
+
+# chat
+
+####################
 
   end
 ####################################
@@ -29,5 +34,4 @@ Rails.application.routes.draw do
   #     patch :update_user_jobs
   #   end
   # end
-  resources :offers, only: [:index, :show]
-end
+  # resources :offers, only: [:index, :show]
