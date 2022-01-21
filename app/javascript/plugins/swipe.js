@@ -30,7 +30,7 @@ const image = document.querySelector('.offer-image');
         explosion.remove(); // remove this explosion container when animation ended
       });
     }
-      explosion.append(elm);
+    explosion.append(elm);
   }
 }
 function rand(min, max) {
