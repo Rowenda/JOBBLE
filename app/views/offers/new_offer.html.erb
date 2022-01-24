@@ -1,0 +1,18 @@
+<h1>tetst</h1>
+<div class="content-offers">
+<%= simple_form_for @offer, url: create_offer_path do |f| %>
+<%= f.input :title, label: 'titre' %>
+<%= f.input :description %>
+<%= f.input :location %>
+<%= f.input :salary %>
+<%= f.input :number_hour %>
+<%= f.input :employement_type %>
+<%= f.input :contract_type %>
+<%= f.input :job_id, as: :check_boxes, collection: Job.all, wrapper: :vertical_collection_inline %>
+<%= f.input :company_name %>
+<%= f.input :photo, as: :file %>
+<%= f.submit %>
+
+
+<% end %>
+</div>

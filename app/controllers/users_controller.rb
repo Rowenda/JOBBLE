@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     @user = current_user
   end # end du dashboard
 
+  def mes_offres
+    @offers = Offer.where(user_id: current_user.id)
+  end
+
   def message_index
    @chatrooms = Chatroom.where(user_id: current_user) + Chatroom.where(recrutor: current_user)
   end
