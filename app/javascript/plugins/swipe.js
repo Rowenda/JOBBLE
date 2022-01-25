@@ -84,7 +84,7 @@ function swipeOffer() {
           carte.style.animationName = 'swiperight'
           // swiped right
           const id = e.target.dataset.id
-          result(id, "like")
+          result(id, "matches")
         }
       }
 //////////////////////////////////////////////////////////////////////////////////
@@ -101,7 +101,7 @@ function swipeOffer() {
 
     acceptBtn.addEventListener("click", (e) => {
       const id = image.dataset.id
-      result(id, "like")
+      result(id, "matches")
 
     })
 
