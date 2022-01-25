@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   end
 
   resources :offers, only: %i[index show] do
-    resources :matches, only: %i[create]
+    post 'like', to: 'matches#like'
     post 'reject', to: 'matches#reject'
   end
 end
