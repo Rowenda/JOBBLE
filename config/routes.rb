@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   get 'job_show', to: 'users#job_show'
   post 'job_update_test', to: 'users#job_update_test'
   get 'skill_show', to: 'users#skill_show'
+  # route en constru
+  get 'mes_offres', to: 'users#mes_offres'
+  get 'new_offer', to: 'offers#new_offer'
+  post 'new_offer', to: 'offers#new_offer'
+  post 'create_offer', to: 'offers#create', as: 'create_offer'
+  #####################
   # get 'professional_update', to: 'users#professional_update'
   #  post 'job_update', to: 'users#job_update' fais la nouvelle ne sert plus
   post 'skill_update', to: 'users#skill_update'

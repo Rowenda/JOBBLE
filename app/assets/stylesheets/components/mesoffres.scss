@@ -1,0 +1,26 @@
+
+.offer-title {
+  font-size: 21px;
+  font-weight: bold;
+  color: $obsydian;
+}
+
+.offer-resume {
+  font-size: 14px;
+  color: $lavande;
+}
+
+.offer-global {
+  display: flex;
+  box-shadow: 1px 1px 6px 1px black;
+  border-radius: 5px;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+    text-align: center;
+}
+
+.conteneur-form-offer {
+  margin-bottom: 50px;
+  height: 700px;
+}

@@ -4,8 +4,8 @@ function explode(x, y) {
     explosion = $('<div class="explosion"></div>');
 
     // mes cibles pour a recup si je veux append l'explosion dedans
-const image = document.querySelector('.offer-image');
-  const offre = document.querySelector('.offre-js');
+// const image = document.querySelector('.offer-image');
+//   const offre = document.querySelector('.offre-js');
   // put the explosion container into the body to be able to get it's size
   // ligne 8 choix de ou l'on veut injecter l'anim
   $('body').append(explosion);
@@ -36,6 +36,9 @@ const image = document.querySelector('.offer-image');
 function rand(min, max) {
   return Math.floor(Math.random() * (max + 1)) + min;
 }
+
+
+// DEBUT SWIPE
 
 function swipeOffer() {
   const image = document.querySelector(".offer-image");

@@ -1,0 +1,19 @@
+<h1>mes offres</h1>
+<div class="content-offers">
+  <% @offers.each do |offer| %>
+
+  <%= link_to offer_path(offer) do %>
+ <div class=' offer-global pill-jaune'>
+  <div class="offer-title">
+  <%= offer.title %>
+  </div>
+  <div class="offer-resume">
+    <%= offer.description %><br>
+    <%= offer.location %>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+
+  <% end %>
