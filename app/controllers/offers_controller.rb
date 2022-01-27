@@ -1,16 +1,19 @@
 class OffersController < ApplicationController
+
   def new_offer
     @offer = Offer.new
+    @jobs = Job.all
+
   end
 
   def create
-   @recrutor = current_user.recrutor = true
-   @recrutor.save!
     job_id = params[:offer][:job_id][1].to_i
     @offer = Offer.new(offer_params)
     @offer.user_id = current_user.id
     @offer.job_id = job_id
     if @offer.save
+      @recrutor = current_user.recrutor = true
+      @recrutor.save!
       redirect_to offer_path(@offer)
     else
       render 'offers/new_offer'
@@ -54,7 +57,9 @@ class OffersController < ApplicationController
     end
   end
 
+
   private
+
 
   def offer_params
     params.require(:offer).permit(

@@ -9,7 +9,6 @@
 
 import { Controller } from "stimulus"
 import { jobClick } from "./seehideform"
-import { myMove } from "./anim";
 import { jobClickSkill } from "./seehide";
 
 export default class extends Controller {

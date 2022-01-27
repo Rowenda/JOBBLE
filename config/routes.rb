@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # route en constru
   get 'mes_offres', to: 'users#mes_offres'
   get 'new_offer', to: 'offers#new_offer'
+  post 'new_offer', to: 'offers#new_offer'
   post 'create_offer', to: 'offers#create', as: 'create_offer'
   #####################
   # get 'professional_update', to: 'users#professional_update'

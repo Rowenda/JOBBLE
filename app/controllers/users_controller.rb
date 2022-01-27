@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def message_index
-   @chatrooms = Chatroom.where(user_id: current_user) + Chatroom.where(recrutor: current_user)
+    @chatrooms = Chatroom.where(user_id: current_user) + Chatroom.where(recrutor: current_user)
   end
 
   def job_show
