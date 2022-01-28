@@ -74,11 +74,11 @@ function swipeOffer() {
       if (Math.abs(diffX) > Math.abs(diffY)) {
         // sliding horizontally
         const carte = document.querySelector('.content-offers');
-        if (diffX > 0) {
+        if (diffX > 0 ) {
+          console.log(diffX);
           // swiped left
           const id = e.target.dataset.id
           carte.style.animationName = 'swipeleft'
-          //  carte.style.transition = 'all 1s ease-out';
 
           result(id, "reject")
 
@@ -102,16 +102,20 @@ function swipeOffer() {
     const acceptBtn = document.querySelector("#accept-btn");
     const rejectBtn = document.querySelector("#reject-btn");
 
-    acceptBtn.addEventListener("click", (e) => {
-      const id = image.dataset.id
-      result(id, "matches")
+  if (acceptBtn && rejectBtn) {
+        acceptBtn.addEventListener("click", (e) => {
+          const id = image.dataset.id
+          result(id, "matches")
 
-    })
+        })
+
 
     rejectBtn.addEventListener("click", (e) => {
       const id = image.dataset.id
       result(id, "reject")
     })
+
+  }
 
   }
 }
@@ -133,12 +137,7 @@ const result = (id, status) => {
         const modal = document.querySelector(".modal-shadow")
         modal.classList.remove("modal-hidden")
         const modalContent = document.querySelector(".match-modal")
-        // loic
-        const carte = document.querySelector('.content-offers');
-        const tabbar = document.querySelector('.anim-js-div');
-        // carte.classList.add('d-none');
-        // tabbar.classList.add('d-none');
-       // setInterval(
+
           explode(260, 700);
           explode(260, 400);
         // fin loic dans result

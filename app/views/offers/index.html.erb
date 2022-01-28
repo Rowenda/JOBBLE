@@ -1,10 +1,8 @@
+
+
 <div class="offre-js">
-<% unless @selected_offers.count.positive? %>
-    <%= link_to new_offer_path, class: "dashboard-pill" do%>
-    <h4>💼</h4> <p>Crée une offre</p>  <p class="fas fa-chevron-right"></p>
-    <% end %>
-  <% end %>
-<%# ma classee pour cacher l'offre %>
+
+
 <% if @selected_offers.count.positive? %>
 
 <div class="content-offers offers">
@@ -13,11 +11,12 @@
 </div>
 
 <%# test loic %>
-
+<div class="button-cree-index">
   <%= link_to new_offer_path, class: "dashboard-pill" do%>
   <h4>💼</h4> <p>Crée une offre</p>  <p class="fas fa-chevron-right"></p>
   <% end %>
-<%#  zdddzdzdzdd %>
+  </div>
+
   <div>
     <% offer = @selected_offers.first %>
       <div>
@@ -39,16 +38,6 @@
               <p class="info-pill"><%= offer.contract_type %></p>
             </div>
 
-            <div class="offer-buttons-content">
-            <%# <% if offer rejected, offer transferred filtered out of index %>
-              <%= link_to "#", remote: true, id: "reject-btn" do %>
-                <h6 class="button-pill-narrow pill-indigo refus-annim-button"><b>❌ Non</b></h6>
-              <% end %>
-            <%# <% if match saved, offer filtered out of index and transferred to matches view avec index (link) %>
-              <%= link_to "#", remote: true, id: "accept-btn" do %>
-                <h6 class="button-pill-narrow pill-jaune"><b>Like</b></h6>
-              <% end %>
-            </div>
 
 
             <div class="b-margin-20"></div>
@@ -68,6 +57,15 @@
       <% else %>
         <div class="content-long dashboard">
         <div class="nothingfound">
+
+
+       <div class="button-cree-index">
+      <%= link_to new_offer_path, class: "dashboard-pill" do%>
+        <h4>💼</h4><p>Crée une offre</p>
+      <% end %>
+  </div>
+
+
         <span class="d-flex justify-content-center" style="font-size: 100px;">😥</span>
         <h5 style="text-align: center;">Aucune nouvelle offre<br>ne correspond à<br>votre profil.</h5>
         </div>

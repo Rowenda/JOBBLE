@@ -10,6 +10,7 @@
   color: $lavande;
 }
 
+// SERT A RIEN LA
 .offer-global {
   display: flex;
   box-shadow: 1px 1px 6px 1px black;
@@ -21,6 +22,57 @@
 }
 
 .conteneur-form-offer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
-  height: 700px;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* hide scrollbar IE and Edge */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+.titre-page-offer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: $obsydian;
+  width: 73%;
+  height: 100%;
+  border-radius: 13px;
+  margin: 1px;
+
+  H1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    color: $jaune;
+  }
+}
+
+
+.title-offer-new {
+  background-color: transparent;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 74%;
+  height: 35px;
+  margin-bottom: 22px;
+  margin-right: 22px;
+  margin-left: 22px;
+  padding: 1px;
+}
+
+
+.deco-form-offer {
+  background-color: rgba(31, 23, 82, 0.733);
+  padding: 20px;
+  border-radius: 13px;
 }

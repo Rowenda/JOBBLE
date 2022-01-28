@@ -1,48 +1,113 @@
+<div class="conteneur-form-offer">
+  <div class="title-offer-new">
+    <div class="titre-page-offer">
+      <H1 id='H1-new-offer' >💼 Crée votre offre</H1>
+    </div>
+</div>
 
-
-<div class="content-offers conteneur-form-offer">
+<div class='content-offers deco-form-offer'>
 <%= simple_form_for @offer, url: create_offer_path do |f| %>
 
 <div class="input-title">
-  <%= f.input :title, label: 'titre' %>
+  <%= f.input :title,
+   label: 'titre',
+    placeholder: 'titre',
+     label_html: { class: 'label-form' },
+      error: "Titre obligatoire"
+       %>
 </div>
-<%= params[:titletest] %>
+
 <div class="input-description">
-<%= f.input :description, as: :text, placeholder: 'entrer une description'%>
+<%= f.input :description,
+ as: :text, label: 'Description',
+ label_html: { class: 'label-form' },
+  placeholder: 'decription min 20 charactères',
+   error: "La description ne peut pas etre vide"
+   %>
 </div>
 
 <div class="input-location">
-<%= f.input :location,  id: 'testo', label: 'ville de l offre', placeholder: "ville" %>
+<%= f.input :location,
+ label: "ville de l'offre",
+  label_html: { class: 'label-form' },
+   placeholder: "ville",
+    error: "Ville obligatoire"
+     %>
 </div>
 
 <div class="input-salary">
-<%= f.input :salary, label: 'Salaire' %>
+<%= f.input :salary,
+ label: 'Salaire',
+  label_html: { class: 'label-form' },
+   placeholder: "Salaire",
+    error: "Salaire obligatoire"
+    %>
 </div>
 
 <div class="input-number-hour">
-<%= f.input :number_hour, label: 'nombre d heures' %>
+<%= f.input :number_hour,
+ label: 'nombre d heures',
+  label_html: { class: 'label-form' },
+   placeholder: "nombre d'heures",
+    error: "Nombre d'heures obligatoire"
+     %>
 </div>
 
 <div class="input-employement-type">
-<%= f.input :employement_type, label: 'Type du contrat' %>
+<%= f.input :employement_type,
+ label: 'Type du contrat',
+  label_html: { class: 'label-form' },
+   placeholder: "ex: CDD / CDI",
+    error: "Type du contrat obligatoire"
+     %>
 </div>
 
 <div class="input-contract-type">
-<%= f.input :contract_type, label: 'Status Juridique' %>
+<%= f.input :contract_type,
+ label: 'Status Juridique',
+  label_html: { class: 'label-form' },
+   placeholder: "Sas ext",
+    error: "Status juridique obligatoire"
+     %>
 </div>
 
 
-<%= f.association :job, collection: @jobs, input_html: { class: 'select2 deco-select2' }, label: 'Métier' %>
+<%= f.association :job,
+ collection: @jobs,
+  input_html: { class: 'select2 deco-select2' },
+   label: 'Métier', label_html: { class: 'label-form' },
+    placeholder: "chercher un métier",
+     error: "Métier obligatoire"
+
+     %>
 
 <div class="input-company">
-<%= f.input :company_name, label: 'Nom de la boite ou compagnie' %>
+<%= f.input :company_name,
+ label: 'Nom de la boite ou compagnie',
+  label_html: { class: 'label-form' },
+   placeholder: "ex: Google",
+    error: "Compagnie obligatoire"
+    %>
 </div>
 
-<%= f.input :photo, as: :file, label: 'photos', placeholder: 'choisir image' %>
-<%= f.submit value: 'crée l offre' %>
+<%= f.input :photo, as: :file, label: 'photos',
+ label_html: { class: 'label-form' },
+ required: true,
+  error: "Type autorisée JPG JPEG PNG GIF",
+   accept: ".png, .jpg, .jpeg"
+    %>
 
 
-<%= console %>
+<div class="submit-offer-container">
+
+  <%= f.submit value: "crée",
+    class: 'submit-offer'
+  %>
+</div>
+
 
 </div>
 <% end %>
+
+
+</div>
