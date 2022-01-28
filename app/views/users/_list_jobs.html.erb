@@ -13,7 +13,7 @@
       <%= f.label job.name, class: "job-name info-pill pill-obsydian ", data: {job: job.id} %>
       <div class="job-form-<%= job.id %> d-none">
          <div class= form-job-content>
-          <%= f.input :experience, placeholder: "Votre experience en mois" %>
+          <%= f.input :experience, placeholder: "Votre experience en mois", required: false %>
           <%= hidden_field_tag :job_id, value: job.id %>
           <%= f.submit "Ajouter" %>
       </div>

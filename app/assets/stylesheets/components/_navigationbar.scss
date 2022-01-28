@@ -15,7 +15,7 @@ h6{
   font-weight: 700;
 }
 span{
-  color: $lavande;
+  color: $jaune;
 }
 }
 
@@ -45,4 +45,37 @@ span{
     font-size: 18px;
     font-weight: bold;
   }
+}
+
+// h2 de la page login
+
+#h2-login {
+  color: #493ba5;
+}
+
+.h2-page-login {
+  background-color: $obsydian;
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 22px;
+  position: absolute;
+  top: 10%;
+//   font-family: ;
+ }
+
+
+label.form-check-label.boolean.optional {
+  color: transparent !important;
+}
+
+
+// pour le button dashboard en haut a gauche de partout
+
+.button-dashboard-top-left {
+  background-color: $obsydian;
+  padding: 3px;
+  border-radius: 13px;
+  border: solid 1px $jaune;
+color:red !important;
 }
