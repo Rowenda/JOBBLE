@@ -9,4 +9,6 @@ class Offer < ApplicationRecord
   validates :description, presence: true, length: { in: 20..1200 }
   validates :location, presence: true
   validates :salary, presence: true
+  validates :company_name, presence: true
+  validates :photo, presence: true
 end

@@ -15,6 +15,34 @@ h6{
   font-weight: 700;
 }
 span{
-  color: $jaune;
+  color: $lavande;
 }
+}
+
+#button-message {
+  background-color: $obsydian;
+  padding: 3px;
+  border-radius: 13px;
+}
+
+
+
+// style du button cree offre dans l'index
+.button-cree-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $jaune;
+  padding: 1px;
+  border-radius: 22px;
+  height: 40px;
+  margin: 10px;
+  width: 90%;
+
+  p {
+    color: #493ba5;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }

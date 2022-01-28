@@ -1,6 +1,6 @@
 <div class="navigation-bar">
 <%= link_to message_index_path do %>
-  <div><span class="fas fa-chevron-left"></span><span> messages</span></div>
+  <div id='button-message'><span class="fas fa-chevron-left"></span><span> messages</span></div>
 <% end %>
 <%= link_to offer_path(Offer.find_by_title(chatroom.name)) do %>
   <h6><%=chatroom.name.first(16).downcase%></h6>
