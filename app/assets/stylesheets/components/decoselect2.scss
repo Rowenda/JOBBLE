@@ -15,6 +15,90 @@ textarea.form-control:focus {
   font-size: 12px;
 }
 
+.form-control {
+  label {
+    color: chartreuse;
+  }
+}
+
+.test-test-test {
+  label {
+    color: red !important;
+  }
+}
+
+.remember-me-checkbox {
+  position: absolute;
+  top: 44%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 13px;
+  padding: 5px;
+  height: 45px;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  }
+
+  // le p enregistrer de la page login a coter checkbox
+  .p-new-user {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $jaune;
+  }
+// button connexion page login
+  .btn-submit-page-login {
+
+    margin-top: 20px;
+
+  }
+
+
+[type="checkbox"]:not(:checked) + label::before,
+[type="checkbox"]:checked + label::before {
+	content: '';
+	position: absolute;
+	left: 0px;
+	top: 0;
+	width: 17px;
+	height: 16.8px;
+	border: 1px solid $jaune;
+	background: $obsydian;
+	border-radius: 5px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0, .1), 0 0 0 rgba(black, .2);
+	transition: all .275s;
+}
+
+/* Aspect de la coche */
+[type="checkbox"]:not(:checked) + label::after,
+[type="checkbox"]:checked + label::after {
+	content: '✕';
+	speak: never; /* Pour être sûr que le lecteur d'écran ne lira pas "fois" */
+	position: absolute;
+	top: .50em;
+	left: .14em;
+	font-size: 1em;
+  font-weight: bold;
+	color: $jaune;
+	line-height: 0;
+	transition: all .2s; /* Petite transition */
+}
+
+/* Aspect non cochée */
+[type="checkbox"]:not(:checked) + label::after {
+	opacity: 0;
+	transform: scale(0) rotate(45deg);
+}
+
+/* Aspect cochée */
+[type="checkbox"]:checked + label::after {
+	opacity: 1;
+	transform: scale(1) rotate(0);
+}
 
 
 button {
@@ -26,10 +110,6 @@ button {
 }
 
 .label-form {
-  // color: $obsydian;
-  // font-weight: bold;
-  // font-family: Arial, Helvetica, sans-serif;
-  // font-size: 16px
   display: none;
 }
 
@@ -74,7 +154,7 @@ button {
 }
 
 .form-check-label {
-  color: $obsydian;
+  color: transparent;
 }
 // bouton ajouter image jaune
  input[type="file"] {

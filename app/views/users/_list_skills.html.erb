@@ -14,7 +14,7 @@
     <%= f.label skill.name, class: "skill-name info-pill pill-obsydian", data: {skill: skill.id} %>
     <div class="skill-form-<%= skill.id %> d-none">
     <div class= form-job-content>
-    <%= f.input :level, label: "Votre niveau sur 5", collection: UserSkill::LEVEL %>
+    <%= f.input :level, label: "Votre niveau sur 5", collection: UserSkill::LEVEL, required: false %>
     <%= hidden_field_tag :skill_id, value: skill.id %>
     <%= f.submit "Ajouter" %>
     </div>

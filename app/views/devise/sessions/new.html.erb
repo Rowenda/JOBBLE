@@ -1,5 +1,8 @@
 <div class="home content-full">
-<h2>Log in</h2>
+
+<div class="h2-page-login">
+<h2 id='h2-login'>Connexion</h2>
+</div>
 
 <div class="b-margin-20"></div>
 
@@ -9,16 +12,22 @@
     <%= f.input :email,
                 required: false,
                 autofocus: true,
-                input_html: { autocomplete: "email" } %>
+                 label_html: { class: 'test-test-test' }
+                 %>
     <%= f.input :password,
+                label: 'mot de passe',
                 required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-
+                error: 'mot de passe ou email inccorect ! '
+                # input_html: { autocomplete: "current-password" }
+                 %>
+<div class="remember-me-checkbox">
+    <%= f.input :remember_me, as: :boolean, input_html: { class: 'checkbox-login' } if devise_mapping.rememberable? %>
+    <p class='p-new-user'>enregistrer</p>
+</div>
   <br>
 
-  <div class= "button-pill-md pill-jaune">
-    <%= f.button :submit, "Log in" %>
+  <div class= "button-pill-md pill-obsydian btn-submit-page-login">
+    <%= f.button :submit, "Connexion" %>
     <%# <% redirect_to dashboard_user_path(@user)%>
   </div>
 
