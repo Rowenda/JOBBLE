@@ -157,6 +157,3 @@ const result = (id, status) => {
 }
 
 export { swipeOffer }
-
-
-// 148
